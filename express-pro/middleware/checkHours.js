@@ -4,7 +4,7 @@ function checkWorkingHours(req, res, next) {
   const day = now.getDay(); // 0: dimanche, 1: lundi, ..., 6: samedi
   const hour = now.getHours();
 
-  if (day >= 1 && day <= 5 && hour >= 9 && hour < 24) {
+  if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
     next(); // Continue si dans les heures de travail
   } else {
     res.send(
